@@ -1,6 +1,8 @@
 /*------------------------
 Base Styles 
 ------------------------*/
+
+
 body {
     color: #834c85;
     font-family: Roboto;
@@ -9,11 +11,19 @@ body {
 .logo {
     font-family: "Josefin Sans";
     font-weight: 300;
-    font
+
 }
 
 .bg-colour{
     background-color: #5b5085;
+}
+
+.bg-colour-lighter{
+    background-color: #d4d7ff;
+}
+
+.nav-link {
+    color: #8f3d85;
 }
 
 
@@ -28,25 +38,30 @@ body {
     background-color: white;
     color: #834c85;
     font-weight: 600;
-    box-shadow: 0px 3px 0px #4a2f51;
+    box-shadow: 0px 2px 0px #4a2f51;
+    border: 0 none;
 
 }
 
 .btn-primary:focus, .btn-primary:active:focus, .btn.active:focus {
-    outline: 0 none;
+    outline: 0 none !important;
+    border-color: brown;
+    background:  #ba5eaf;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active .btn-primary, .btn-primary.active, .open, .dropdown-toggle.btn-primary {
-    background:  #9B59B6;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open, .dropdown-toggle.btn-primary {
+    background:  #ba5eaf;
+    outline: 0 none !important;
+    box-shadow: none;
     border: 0 none;
     
 }
 
-.key-btn:selected {
-    background-color: aquamarine;
+
+
+.bootstrap-select .btn:focus {
+    outline: none !important;
 }
-
-
 
 hr {
     background-color: #e9dfec;
@@ -54,7 +69,56 @@ hr {
 
 
 .cta-btn {
-    background-color:  #cb3469;
+    background-color:  #DB0A5B;
     border: 1px solid white;
     border-radius: 10px;
+}
+
+
+
+.btn:focus,
+.btn:active {
+  box-shadow: none;
+}
+
+
+.skewed-edge{
+  height: 390px;
+  width: 100%;
+  position: relative;
+}
+
+.skewed-edge:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-7deg);
+}
+
+.skewed-edge2{
+  height: 110px;
+  width: 100%;
+  position: relative;
+}
+
+.skewed-edge2:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-7deg);
+}
+
+.soc-icon {
+    height: 50px;
+    
 }
