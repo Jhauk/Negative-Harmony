@@ -21,27 +21,57 @@
   <body>
       
       
-      <!-- Logo -->
-      <div class="container-fluid bg-colour text-center ">
+      <!-- Mobile and Tablet Logo -->
+      <div class="container-fluid bg-colour text-center hidden-lg-up ">
           
           <h3 class="logo m-0 col-10 pb-3 pt-2 mx-auto">Negative Harmony Tool</h3>
       </div>
       
       
-      <!-- Navigation -->
-      <div class="container-fluid">
-          <ul class="nav row  mx-auto">
-              <li class="nav-item col3 p-0 text-center">
+      
+      <!-- Mobile and Tablet Navigation -->
+      <div class="container-fluid hidden-lg-up">
+          <ul class="nav row mx-auto ">
+              <li class="nav-item text-center col-3 p-0 // col-md-2 offset-md-2">
                 <a class="nav-link" href="#">Tool</a>
               </li>
-              <li class="nav-item col-6 p-0 text-center">
+              <li class="nav-item col-6 p-0 text-center // col-md-4">
                 <a class="nav-link" href="#">How it Works</a>
               </li>
-              <li class="nav-item col-3 p-0 text-center">
+              <li class="nav-item col-3 p-0 text-center // col-md-2">
                 <a class="nav-link" href="#">About</a>
               </li>
           </ul>
       </div>
+      
+      
+      
+      <!-- Desktop Logo and Navigation -->
+     
+      <nav class="desk-nav navbar navbar-toggleable-md navbar-light bg-faded hidden-md-down">
+          <div class="container">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+           
+          <a class="navbar-brand" href="#">Negaton Harmony Tool</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Tool<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">How it Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+
+            </ul>
+          </div>
+               </div>
+      
+        </nav>
       
       
       <!-- Main Tool -->
@@ -59,51 +89,51 @@
                       <div class="row justify-content-center" data-toggle="buttons">
 
 
-                              <label class="btn key-btn btn-primary active col-3 mr-3 mb-2">
+                              <label class="btn key-btn btn-primary active // col-3 mr-3 mb-2 // col-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // ml-lg-5 mr-lg-5 //  ">
                                 <input type="radio" name="options" id="option1" autocomplete="off" checked>A
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 mr-3 ml-2 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5">
                                 <input type="radio" name="options" id="option2" autocomplete="off">Bb
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 ml-2 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5 ">
                                 <input type="radio" name="options" id="option3" autocomplete="off">B
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 mr-3 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5 ">
                                 <input type="radio" name="options" id="option4" autocomplete="off">C
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 mr-3 ml-2 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 ml-sm-0 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5 ">
                                 <input type="radio" name="options" id="option5" autocomplete="off">Db
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 ml-2 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-md-1 mr-md-4 ml-md-4 mb-md-3 // mr-lg-5 ">
                                 <input type="radio" name="options" id="option6" autocomplete="off">D
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 mr-3 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // ml-lg-5 mr-lg-5   ">
                                 <input type="radio" name="options" id="option7" autocomplete="off">Eb
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 mr-3 ml-2 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5">
                                 <input type="radio" name="options" id="option8" autocomplete="off">E
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 ml-2 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 ml-sm-0 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5 ">
                                 <input type="radio" name="options" id="option9" autocomplete="off">F
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 mr-3 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5">
                                 <input type="radio" name="options" id="option10" autocomplete="off">F#
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 mr-3 ml-2 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5  ">
                                 <input type="radio" name="options" id="option11" autocomplete="off">G
                               </label>
 
-                              <label class="btn key-btn btn-primary col-3 ml-2 mb-2">
+                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-md-1 mr-md-4 ml-md-4 mb-md-3 // mr-lg-5  ">
                                 <input type="radio" name="options" id="option9" autocomplete="off">Gb
                               </label>
 
@@ -115,10 +145,10 @@
 
                   </div> <!-- /button conainter --> 
 
-              </div> <!-- /conainter -->
+           
 
 
-              <hr class="mt-1 ml-3 mr-3">
+              <hr class="mt-1 ml-1 mr-1">
 
 
               <!-- Major / Minor Toggle -->
@@ -141,9 +171,9 @@
 
               </div> <!-- /conainter -->
 
-               <hr class="mt-2 ml-3 mr-3">
+               <hr class="mt-2 ml-1 mr-1">
 
-
+   </div> <!-- /conainter -->
 
                <!-- CTA Button -->
                <div class="container">
@@ -161,9 +191,9 @@
       
       
            <!-- Description -->
-           <div class="container mt-4 mx-2">
-               <div class="row">
-                   <h5 class="text-center mt-3 mb-3 pl-2 pr-2">About the Negative Harmony Tool</h5>
+           <div class="container mx-2">
+               <div class="row mx-auto">
+                   <h5 class="text-cente mb-3 pl-2 pr-2">About the Negative Harmony Tool</h5>
                    <p>The tool will return the negative pitches for the selected scale, as well as some basic chords.</p>
                    <p class="learn-more">Learn more about negative harmony</p>
                </div>

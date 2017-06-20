@@ -45,7 +45,12 @@ hr {
 }
 
 .skew-outer {
-    padding-bottom: 10%;
+    padding-bottom: 17%;
+
+}
+
+.desk-nav {
+    background-color: #ABB7B7;
 }
 
 
@@ -113,7 +118,7 @@ Skewed Div Bottoms
 ----------------------------*/
 
 .skewed-edge{
-  height: 425px;
+  height: 390px;
   width: 100%;
   position: relative;
 }
@@ -134,7 +139,7 @@ Skewed Div Bottoms
 
 
 .skewed-edge2{
-  height: 110px;
+  height: 120px;
   width: 100%;
   position: relative;
 }
@@ -155,3 +160,50 @@ Skewed Div Bottoms
     height: 60px;
     
 }
+
+
+/*----------------------------
+Media Queries
+----------------------------*/
+
+@media (min-width: 576px) {
+    
+    .skewed-edge {
+        height: 340px; {
+            
+        }
+    }
+    
+    .skewed-edge:after{
+        transform: skewY(-4deg) !important;
+    }
+
+    
+    .skewed-edge2:after{
+        transform: skewY(-4deg) !important;
+    }
+}
+
+.skew-outer {
+  height: 8%;
+}
+
+
+ @media (min-width: 992px) {
+    
+    .skewed-edge {
+        height: 310px; 
+            
+        }
+
+    
+    .skewed-edge:after{
+        transform: skewY(-3deg) !important;
+    }
+     
+    .skewed-edge2:after{
+        transform: skewY(-3deg) !important;
+    }
+        
+}
+    
