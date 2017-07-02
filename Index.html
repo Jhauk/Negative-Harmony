@@ -48,93 +48,96 @@
       
       <!-- Desktop Logo and Navigation -->
      
-      <nav class="desk-nav navbar navbar-toggleable-md navbar-light bg-faded hidden-md-down">
+      <nav class="bg-colour-lighter  desk-nav navbar navbar-toggleable-md navbar-light bg-faded hidden-md-down">
           <div class="container">
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-           
-          <a class="navbar-brand" href="#">Negaton Harmony Tool</a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Tool<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">How it Works</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-            </ul>
+              <a class="navbar-brand" href="#">Negative Harmony Tool</a>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Tool<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">How it Works</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+
+                </ul>
+              </div>
           </div>
-               </div>
       
         </nav>
       
       
       <!-- Main Tool -->
+       
       <div class="skew-outer">
           <div class="bg-colour skewed-edge">
+             <form onsubmit="return loadScale()">
               <div class="container text-center justify-content-center">
                   <h6 class="text-center pt-3">Select a Key</h6>
 
-                  <hr class="ml-1 mr-1">
+                  <hr class=" mx-auto ml-1 mr-1 //">
 
 
-
+                  
                   <div class="container" data-toggle="buttons">
 
-                      <div class="row justify-content-center" data-toggle="buttons">
+                      <div class="row justify-content-center col-xl- mx-auto" data-toggle="buttons" id="scaleLetter">
 
+                        
 
-                              <label class="btn key-btn btn-primary active // col-3 mr-3 mb-2 // col-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // ml-lg-5 mr-lg-5 //  ">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked>A
+                              <label class="btn key-btn btn-primary active // col-3 mr-3 mb-2 // col-sm-2 ml-sm-3 mr-sm-3 // col-lg-1 ml-lg-4 mr-lg-4" value="a">
+                                <input type="radio" name="scaleOptions" id="option1" autocomplete="off" value="a" checked>A
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5">
-                                <input type="radio" name="options" id="option2" autocomplete="off">Bb
+                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option2" autocomplete="off" value="bb">Bb
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5 ">
-                                <input type="radio" name="options" id="option3" autocomplete="off">B
+                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option3" autocomplete="off" value="b">B
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5 ">
-                                <input type="radio" name="options" id="option4" autocomplete="off">C
+                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option4" autocomplete="off" value="c">C
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 ml-sm-0 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5 ">
-                                <input type="radio" name="options" id="option5" autocomplete="off">Db
+                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 ml-sm-3 mr-sm-3 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option5" autocomplete="off" value="db">Db
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-md-1 mr-md-4 ml-md-4 mb-md-3 // mr-lg-5 ">
-                                <input type="radio" name="options" id="option6" autocomplete="off">D
+                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option6" autocomplete="off" value="d">D
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // ml-lg-5 mr-lg-5   ">
-                                <input type="radio" name="options" id="option7" autocomplete="off">Eb
+                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option7" autocomplete="off" value="eb">Eb
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5">
-                                <input type="radio" name="options" id="option8" autocomplete="off">E
+                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option8" autocomplete="off" value="e">E
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 ml-sm-0 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5 ">
-                                <input type="radio" name="options" id="option9" autocomplete="off">F
+                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 ml-sm-3 mr-sm-3 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option9" autocomplete="off" value="f">F
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5">
-                                <input type="radio" name="options" id="option10" autocomplete="off">F#
+                              <label class="btn key-btn btn-primary // col-3 mr-3 mb-2 // col-sm-2 ml-sm-2 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option10" autocomplete="off" value="f#">F#
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-md-1 mr-md-4 ml-md-3 mb-md-3 // mr-lg-5  ">
-                                <input type="radio" name="options" id="option11" autocomplete="off">G
+                              <label class="btn key-btn btn-primary // col-3 mr-3 ml-2 mb-2 // col-sm-2 // col-lg-1 ml-lg-4 mr-lg-4">
+                                <input type="radio" name="scaleOptions" id="option11" autocomplete="off" value="g">G
                               </label>
 
-                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-md-1 mr-md-4 ml-md-4 mb-md-3 // mr-lg-5  ">
-                                <input type="radio" name="options" id="option9" autocomplete="off">Gb
+                              <label class="btn key-btn btn-primary // col-3 ml-2 mb-2 // col-sm-2 mr-sm-3 // col-lg-1 ml-lg-4 mr-lg-4 ">
+                                <input type="radio" name="scaleOptions" id="option9" autocomplete="off" value="gb">Gb
                               </label>
 
 
@@ -148,7 +151,7 @@
            
 
 
-              <hr class="mt-1 ml-1 mr-1">
+              <hr class=" mx-auto mt-1 ml-1 mr-1 //">
 
 
               <!-- Major / Minor Toggle -->
@@ -156,13 +159,13 @@
 
                   <div class="row justify-content-center" data-toggle="buttons">
 
-                      <div class="btn-group" data-toggle="buttons">
+                      <div class="btn-group form -group" data-toggle="buttons" id="majMin">
 
                           <label class="btn maj-btn btn-primary active ">
-                            <input type="radio" name="options" id="option1" autocomplete="off" checked>Major
+                            <input type="radio" name="scaleTypeOptions" value="major" autocomplete="off" id="major" checked>Major
                           </label>
                           <label class="btn maj-btn btn-primary">
-                            <input type="radio" name="options" id="option2" autocomplete="off">Minor
+                            <input type="radio" name="scaleTypeOptions"  autocomplete="off" id="minor" value="minor">Minor
                           </label>
 
                       </div> <!-- /btn-group -->
@@ -171,7 +174,7 @@
 
               </div> <!-- /conainter -->
 
-               <hr class="mt-2 ml-1 mr-1">
+               <hr class=" mx-auto mt-2 ml-1 mr-1 //">
 
    </div> <!-- /conainter -->
 
@@ -179,62 +182,119 @@
                <div class="container">
 
                    <div class="row justify-content-center ">
-                        <button type="button" class="col cta-btn btn btn-secondary col-5 mb-4 ">Find Key</button> 
+                        <button type="submit" class="col cta-btn btn btn-secondary // col-5 mb-4 // col-sm-3 // ">Find Key</button> 
                    </div>
                    
                </div>    
-              
+                </form>
                </div>  <!-- /skewed-edge -->
           
            </div>  <!-- /skew-outer -->
-      
+    
       
       
            <!-- Description -->
-           <div class="container mx-2">
-               <div class="row mx-auto">
-                   <h5 class="text-cente mb-3 pl-2 pr-2">About the Negative Harmony Tool</h5>
-                   <p>The tool will return the negative pitches for the selected scale, as well as some basic chords.</p>
-                   <p class="learn-more">Learn more about negative harmony</p>
+           <div class="container">
+               <div class="row mx-auto // mt-3 col-12 // col-md-10 // mt-lg-5 pt-lg-4">
+                   <h5 class="text-center col-12 mb-3">About the Negative Harmony Tool</h5>
+                   <p class="desc col-12">The tool will return the negative pitches for the selected scale, as well as some basic chords.</p>
+                   <p class="desc learn-more col-12">Learn more about negative harmony.</p>
                </div>
            </div>
       
       
       
           <!-- Social Share -->
-          <div class="skew-outer mt-3">
+          <div class="skew-outer mt-3 // hidden-md-up">
               <div class="bg-colour-lighter skewed-edge2">
-                   <div class="container text-center ">
-                       <h5 class="pt-3">Share the Tool</h5>
+                   <div class="container text-center">
+                       <h5 class="pt-3 mb-3">Share the Tool</h5>
 
-                       <div class="row offset-3 ">
-                           <img class="soc-icon col-3 p-0 m-0 mr-2" src="Images/002-facebook.svg" alt="Facebook">
-                           <img class="soc-icon col-3 p-0 m-0 ml-2" src="Images/001-twitter.svg" alt="Facebook">
+                       <div class="row ">
+                           <div class="img-container text-center">
+                               <img class="soc-icon img-responsive col-3" src="Images/002-facebook.svg" alt="Facebook">
+                               <img class="soc-icon img-responsive col-3" src="Images/001-twitter.svg" alt="Facebook">
+                           </div>
                        </div>
                    </div>
 
                </div>
           </div>
       
+           <!-- Social Share / Made By  -->
+          <div class="skew-outer mt-3 // hidden-sm-down">
+              <div class="bg-colour-lighter skewed-edge2">
+                   <div class="container text-center">
+                       <div class="row">
+                       <div class="col">
+                       <h5 class="pt-3 mb-3">Share the Tool</h5>
+
+                       <div class="row ">
+                           <div class="img-container text-center">
+                               <img class="soc-icon img-responsive col-3" src="Images/002-facebook.svg" alt="Facebook">
+                               <img class="soc-icon img-responsive col-3" src="Images/001-twitter.svg" alt="Facebook">
+                           </div>
+                       </div>
+                     </div>
+                       
+                       <div class="col">
+                      <h5 class="pt-3">Created by Jhauk</h5>
+
+                   <div class="row">
+                       <img class="jhauk-j img-thumbnail mx-auto" src="Images/Jprofile.png" alt="Facebook">
+                   </div>
+                           
+                           
+                       </div>
+                   </div>
+                       </div>
+
+               </div>
+          </div>       
+      
       
       
           <!-- Created by -->
-               <div class="container text-center">
-                   <h5 class="pt-3 mt-4">Created by Jhauk</h5>
+               <div class="container text-center hidden-md-up">
+                   <h5 class="pt-3">Created by Jhauk</h5>
 
                    <div class="row">
                        <img class="jhauk-j img-thumbnail mx-auto" src="Images/Jprofile.png" alt="Facebook">
                    </div>
                </div>
  
+      
+      
+      
            <!-- Footer -->
-           <footer class="footer mt-4">
+           <footer class="footer mt-4 hidden-lg-up">
                <div class="bg-colour container-fluid text-center">
                 <span class="text-muted h6">Proudly produced by Jhauk Music</span>
                 <br>
                 <span class="text-muted h6">© Jeremy Hajduk 2017</span>   
             </div>
           </footer>
+      
+            <!-- Footer -->
+           <footer class="footer footy mt-4 hidden-md-down">
+               <div class="bg-colour container-fluid text-center">
+                   <div class="row">
+                       
+                    
+                   
+                       <div class="col text-center pr-5">
+                            <span class="text-muted h6"> by Jhauk Music</span>
+                            <br>
+                            <span class="text-muted h6">© Jeremy Hajduk 2017</span>   
+                        </div>
+                       
+                        
+                       
+                  </div>   
+            </div>
+          </footer>
+      
+      
       
       
       
@@ -244,5 +304,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="js/javascript.js"></script>
   </body>
 </html>

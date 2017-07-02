@@ -45,13 +45,39 @@ hr {
 }
 
 .skew-outer {
-    padding-bottom: 17%;
+    padding-bottom: 14%;
 
 }
 
 .desk-nav {
-    background-color: #ABB7B7;
+    background-color: #ededed;
+  
 }
+
+.footy {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.navbar-default {
+    background-color: black;
+    border-color: #E7E7E7;
+}
+
+
+/*----------------------------
+Dekstop Navbar
+----------------------------*/
+
+ change the background color 
+.navbar{
+    background-color: rgba(73, 3, 30, 0.2)
+}
+
 
 
 /*----------------------------
@@ -161,6 +187,10 @@ Skewed Div Bottoms
     
 }
 
+.img-container {
+    min-width: 100%
+}
+
 
 /*----------------------------
 Media Queries
@@ -174,18 +204,28 @@ Media Queries
         }
     }
     
-    .skewed-edge:after{
+   .skewed-edge:after,
+   .skewed-edge2:after {
         transform: skewY(-4deg) !important;
     }
 
+    .skew-outer {
+      padding-bottom: 8%
+    }
+
+    hr {
+        max-width: 80%;
+        text-align: center;
+    }
     
-    .skewed-edge2:after{
-        transform: skewY(-4deg) !important;
+    .desc {
+        text-align: center;
     }
-}
-
-.skew-outer {
-  height: 8%;
+    
+    html {
+         position: relative;
+         min-height: 100%
+     }
 }
 
 
@@ -195,15 +235,59 @@ Media Queries
         height: 310px; 
             
         }
+     
+     .skewed-edge,
+     .skewed-edge2 {
+         max-width: 65%;
+         margin: 30px auto;
+         border-radius: 10px;
+     }
 
     
-    .skewed-edge:after{
-        transform: skewY(-3deg) !important;
+    .skewed-edge:after,
+    .skewed-edge2:after {
+        border-radius: 10px
+        
+     }
+     
+
+    .skew-outer {
+      padding-bottom: 10px;
+    }
+
+
+    hr {
+        max-width: 80%;
+        text-align: center;
     }
      
-    .skewed-edge2:after{
-        transform: skewY(-3deg) !important;
-    }
-        
+     .skewed-edge2 {
+         height: 150px;
+     }
+     
+     .jhauk-j {
+         width: 80px;
+         height: 80px;
+     }   
+     
+     
 }
-    
+@media (min-width: 1300px) {
+    .skewed-edge,
+     .skewed-edge2 {
+         max-width: 50%;
+         margin: 30px auto;
+         border-radius: 10px;
+     }
+
+}
+
+@media (min-width: 1500px) {
+    .skewed-edge,
+     .skewed-edge2 {
+         max-width: 45%;
+         margin: 30px auto;
+         border-radius: 10px;
+     }
+
+}
