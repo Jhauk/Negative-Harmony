@@ -1,5 +1,5 @@
 /*----------------------------
-Base Styles 
+Base Styles
 ----------------------------*/
 
 
@@ -69,13 +69,51 @@ hr {
 }
 
 
+
+/*----------------------------
+Scale Page Styles
+----------------------------*/
+
+.scaleTable {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.scaleTable td {
+    padding: 7px 30px;
+    margin: 10px;
+    border-top: 1px solid grey;
+}
+
+.scaleTable th {
+    padding: 5px 30px;
+    margin: 10px;
+    border-bottom: 2px solid black;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.rightBorder {
+    border-right: 1px solid grey;
+}
+
+
+
+
+.bottomEdge {
+    border-bottom: none;
+}
+
+
 /*----------------------------
 Dekstop Navbar
 ----------------------------*/
 
  change the background color 
 .navbar{
-    background-color: rgba(73, 3, 30, 0.2)
+    background-color: rgba(73, 3, 30, 0.2);
 }
 
 

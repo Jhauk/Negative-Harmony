@@ -1,3 +1,26 @@
+var selectedScaleResult;
+
+
+// All of the Key Information
+
+//C major
+
+var cMajor = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C'];
+var cMajorTriads = ['Cmaj<br>C - E - G', 'Dmin<br>D - F - A', 'E - G - B', 'F - A - C', 'G - B - D', 'A - C - E', 'B - D - F', 'C - E - G'];
+var cMajorSevenths = [];
+var cMajorNinths = [];
+
+var cMajorNegative = ['G', 'F', 'Eb', 'D', 'C', 'Bb', 'Ab', 'G'];
+var cMajorNegativeTriads = ['Cmin<br>C - Eb - G', 'Bbmaj<br>Bb - D - F', 'Eb', 'D', 'C', 'Bb', 'Ab', 'G'];
+var cMajorNegativeSevenths = [];
+var cMajorNegativeNinths = [];
+
+
+
+//C# major
+
+
+//This powers the scale selector on the main page
 function loadScale() {
     
     var scaleLetter;
@@ -6,7 +29,7 @@ function loadScale() {
     var scaleType;
     var majMin;
     
-    var selectedScaleResult;
+ 
     var scaleUrl
     
     
@@ -26,52 +49,21 @@ function loadScale() {
     
     //Collates  scaleLetter and scaleType
     function selectedScaleFunc() {
-        var selectedScale = scaleLetter + scaleType;3
+        var selectedScale = scaleLetter + scaleType;
         selectedScaleResult = selectedScale
     }    
     
+       
     
-    
-    
-    //Finds which scale letter is checked, updates optionNumber and runs letterFunction
+    //Finds which scale letter the user has selected, updates optionNumber and runs letterFunction
     function letterFinder() {
-        if ( document.getElementById( 'option1' ).checked ) {
-            optionNumber = "option1";
-            letterFunction();
-        } else if ( document.getElementById( 'option2' ).checked ) {
-            optionNumber = "option2";
-            letterFunction();          
-        } else if ( document.getElementById( 'option3' ).checked ) {
-            optionNumber = "option3";
-            letterFunction();          
-        } else if ( document.getElementById( 'option4' ).checked ) {
-            optionNumber = "option4";
-            letterFunction(); 
-           } else if ( document.getElementById( 'option5' ).checked ) {
-            optionNumber = "option5";
-            letterFunction();          
-        } else if ( document.getElementById( 'option6' ).checked ) {
-            optionNumber = "option6";
-            letterFunction();          
-        } else if ( document.getElementById( 'option7' ).checked ) {
-            optionNumber = "option7";
-            letterFunction();
-        } else if ( document.getElementById( 'option8' ).checked ) {
-            optionNumber = "option8";
-            letterFunction();          
-        } else if ( document.getElementById( 'option9' ).checked ) {
-            optionNumber = "option9";
-            letterFunction();          
-        } else if ( document.getElementById( 'option10' ).checked ) {
-            optionNumber = "option10";
-            letterFunction(); 
-        } else if ( document.getElementById( 'option11' ).checked ) {
-            optionNumber = "option11";
-            letterFunction();          
-        } else if ( document.getElementById( 'option12' ).checked ) {
-            optionNumber = "option12";
-            letterFunction();          
-        }
+            for (var i = 1; i < 13; i += 1) {
+                if ( document.getElementById( 'option' + i ).checked ) {
+                    optionNumber = "option" + i;
+                    letterFunction();
+                    break
+                    }
+             }
     }
     
    
@@ -93,20 +85,78 @@ function loadScale() {
     
     
     
-    //Calling all the functions to make them worked
-    letterFinder()
-    typefinder()
+    //Calling all the functions
+    letterFinder();
+    typefinder();
     selectedScaleFunc();
-    getScaleUrl()
+    getScaleUrl();
     
     window.location = scaleURL ;  
     
     return false;
+}
+
+
+
+//This powers "Show Triads" button on the scale pages
+function dynamicTable( keyArray, negativeKeyArray ) {
+    
+    
+    //Exits the function if it's already "active"   
+    if ( document.getElementById("original0").innerHTML === "Cmaj<br>C - E - G" ) {
+        return;
     }
+    
+    $("td").fadeOut(1).innerHTML;
+    
+    //Fills in the original column
+    for ( var i = 0; i < keyArray.length; i += 1) {
+        document.getElementById("original" + i).innerHTML = keyArray[i];
+    }
+    
+    //Fills in the negative column
+    for ( var i = 0; i < negativeKeyArray.length; i += 1) {
+            document.getElementById("negative" + i).innerHTML = negativeKeyArray[i];
+        }
+    
+    $("td").fadeIn().innerHTML;
+    }
+
+    
+
+
+//This powers "Show Scales" button on the scale pages
+function refreshTable( keyArray, negativeKeyArray ) {
+    
+    
+    //Exits the function if it's already "active"   
+    if ( document.getElementById("original0").innerHTML === "C" ) {
+        return;
+    }
+    
+    $("td").fadeOut(1).innerHTML;
+
+    //Resets Original column
+    for ( var i = 0; i < keyArray.length; i += 1) {
+       
+        document.getElementById("original" + i).innerHTML = keyArray[i];
+        
+
+    }
+    
+    //Resets Negative column
+    for ( var i = 0; i < negativeKeyArray.length; i += 1) {   
+        document.getElementById("negative" + i).innerHTML = negativeKeyArray[i];
+    }
+    
+    $("td").fadeIn().innerHTML;
+}   
+
+
     
 
     
-    
+
     
     
         
