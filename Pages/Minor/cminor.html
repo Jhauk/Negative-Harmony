@@ -15,7 +15,7 @@
       
     <!-- Custom CSS -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main-styles.css" />
+    <link rel="stylesheet" href="../../css/main-styles.css" />
   </head>
     
   <body>
@@ -81,10 +81,18 @@
           <div class="bg-colour skewed-edge text">
               
               <div class="containter text-center">
-                   <h1 class="p-3" class="pageKey" id="cMajor">C Major</h1>
+                   <h1 class="p-3" class="pageKey" id="cMinor">C Major</h1>
                   
-                  <button class="btn btn-primary" onclick="refreshTable( cMajor, cMajorNegative )" id="eggNog">Show Scales</button>                    
-                  <button class="btn btn-primary" onclick="dynamicTable( cMajorTriads, cMajorNegativeTriads )">Show Triads</button>  
+                  <div class="btn-group">
+                  <button class="btn key-btn btn-primary" onclick="showScales( cMinor[0], cMinor[3])" id="eggNog">Scales</button>  
+                  
+                  <button class="btn key-btn btn-primary" onclick="showChords(cMinor[1], cMinor[4])">Chords</button>  
+ 
+                  <button class="btn key-btn btn-primary" onclick="showSevenths( cMinor[2], cMinor[5])">Sevenths</button>  
+                  </div>
+                  
+
+                  
 
                   
                    <div class="row">
@@ -94,7 +102,7 @@
                             <th>Negative</th> 
                           </tr>
                           <tr>
-                            <td class="rightBorder " id="original0">C</td>
+                            <td class="rightBorder root" id="original0">C</td>
                             <td id="negative0">G</td> 
                           </tr>
                            <tr>
@@ -123,7 +131,7 @@
                           </tr>
                           <tr>
                             <td class="rightBorder bottomEdge" id="original7">C</td>
-                            <td class="bottomEdge" id="negative7">G</td> 
+                            <td class="bottomEdge root" id="negative7">G</td> 
                           </tr>
                                                         
                                    
@@ -220,7 +228,8 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="../js/javascript.js"></script>
+    <script src="../../js/scaleInfo.js"></script>
+    <script src="../../js/javascript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>

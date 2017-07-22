@@ -68,6 +68,15 @@ hr {
     border-color: #E7E7E7;
 }
 
+.tableHr {
+    padding: 0;
+    margin: 5px auto;
+    width: 70px;
+}
+
+.root {
+    background-color: rgba(47, 204, 112, .5)
+}
 
 
 /*----------------------------
@@ -77,6 +86,7 @@ Scale Page Styles
 .scaleTable {
     margin: 0 auto;
     margin-top: 10px;
+    border: solid 1px;
 }
 
 .scaleTable td {
@@ -95,8 +105,20 @@ tr:hover {
     background-color: #f5f5f5;
 }
 
-.rightBorder {
-    border-right: 1px solid grey;
+.scaleTable td:nth-child(2) {
+    border-right: 2px solid black;
+}
+
+.scaleTable td:first-child {
+    border-right: 1px dotted grey;
+    font-size: .8em;
+    font-style: italic;
+}
+
+.scaleTable td:last-child {
+    border-left: 1px dotted grey;
+    font-size: .8em;
+    font-style: italic;
 }
 
 
@@ -106,6 +128,10 @@ tr:hover {
     border-bottom: none;
 }
 
+.scaleTable th {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: black;
+}
 
 /*----------------------------
 Dekstop Navbar

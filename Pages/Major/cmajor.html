@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+    <title>Negative Harmony Tool</title>
+      
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      
+      
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main-styles.css" />
+  </head>
+    
+  <body>
+      
+      
+      <!-- Mobile and Tablet Logo -->
+      <div class="container-fluid bg-colour text-center hidden-lg-up ">
+          
+          <h3 class="logo m-0 col-10 pb-3 pt-2 mx-auto">Negative Harmony Tool</h3>
+      </div>
+      
+      
+      
+      <!-- Mobile and Tablet Navigation -->
+      <div class="container-fluid hidden-lg-up">
+          <ul class="nav row mx-auto ">
+              <li class="nav-item text-center col-3 p-0 // col-md-2 offset-md-2">
+                <a class="nav-link" href="#">Tool</a>
+              </li>
+              <li class="nav-item col-6 p-0 text-center // col-md-4">
+                <a class="nav-link" href="#">How it Works</a>
+              </li>
+              <li class="nav-item col-3 p-0 text-center // col-md-2">
+                <a class="nav-link" href="#">About</a>
+              </li>
+          </ul>
+      </div>
+      
+      
+      
+      <!-- Desktop Logo and Navigation -->
+     
+      <nav class="bg-colour-lighter  desk-nav navbar navbar-toggleable-md navbar-light bg-faded hidden-md-down">
+          <div class="container">
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <a class="navbar-brand" href="#">Negative Harmony Tool</a>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Tool<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">How it Works</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+
+                </ul>
+              </div>
+          </div>
+      
+        </nav>
+      
+      
+      <!-- Main Content -->        
+              <div class="containter text-center">
+                   <h1 class="p-3" class="pageKey" id="cMajor">C Major</h1>
+                  
+                  <div class="btn-group">
+                  <button class="btn key-btn btn-primary" onclick="showScales( cMajor[0], cMajor[3])" id="eggNog">Scales</button>  
+                  
+                  <button class="btn key-btn btn-primary" onclick="showChords(cMajor[1], cMajor[4])">Chords</button>  
+ 
+                  <button class="btn key-btn btn-primary" onclick="showSevenths( cMajor[2], cMajor[5])">Sevenths</button>  
+                  </div>
+                  
+
+                  
+
+                  
+                   <div class="row">
+                        <table class="text-center scaleTable"  >
+                          <tr>
+                            <th colspan="2" class="rightBorderTop text-center">Original</th> 
+                            <th colspan="2" class="text-center">Negative</th> 
+                          </tr>
+                          <tr>
+                            <td class="rightBorder root">I</td>  
+                            <td class="rightBorder root" id="original0">C</td>
+                            <td id="negative0">G</td> 
+                            <td class="">I<sup>2</sup></td>    
+                          </tr>
+                           <tr>
+                            <td class="rightBorder">ii</td>     
+                            <td class="rightBorder" id="original1">D</td>
+                            <td id="negative1">F</td> 
+                            <td class="">Vii</td> 
+                          </tr>
+                          <tr>
+                            <td class="rightBorder">iii</td>    
+                            <td class="rightBorder" id="original2">E</td>
+                            <td id="negative2">Eb</td> 
+                            <td class="">Vi</td> 
+                          </tr>
+                          <tr>
+                            <td class="rightBorder">IV</td>     
+                            <td class="rightBorder" id="original3">F</td>
+                            <td id="negative3">D</td> 
+                            <td class="">V</td> 
+                          </tr>
+                          <tr>
+                            <td class="rightBorder">V</td>     
+                            <td class="rightBorder" id="original4">G</td>
+                            <td id="negative4">C</td> 
+                            <td class="">IV</td> 
+                          </tr>
+                          <tr>
+                            <td class="rightBorder rt">Vi</td>      
+                            <td class="rightBorder" id="original5">A</td>
+                            <td id="negative5">Bb</td> 
+                            <td class="">iii</td> 
+                          </tr>
+                          <tr>
+                            <td class="rightBorder rt">Vii</td>     
+                            <td class="rightBorder" id="original6">B</td>
+                            <td id="negative6">Ab</td> 
+                            <td class="">ii</td> 
+                          </tr>
+                          <tr>
+                            <td class="rightBorder">I<sup>2</sup></td>    
+                            <td class="rightBorder bottomEdge" id="original7">C</td>
+                            <td class="bottomEdge root" id="negative7">G</td> 
+                            <td class="root">I</td>   
+                          </tr>
+                                                        
+                                   
+                        </table>
+                       
+                      
+                   </div>
+                             
+                  
+                
+              
+              </div>
+
+      
+      
+           <!-- Description -->
+           <div class="container">
+               <div class="row mx-auto // mt-3 col-12 // col-md-10 // mt-lg-5 pt-lg-4">
+                   
+               </div>
+           </div>
+      
+      
+      
+          <!-- Social Share -->
+<!--
+          <div class="skew-outer mt-3 // hidden-md-up">
+              <div class="bg-colour-lighter skewed-edge2">
+            
+               </div>
+          </div>
+-->
+      
+           <!-- Social Share / Made By  -->
+<!--
+          <div class="skew-outer mt-3 // hidden-sm-down">
+              <div class="bg-colour-lighter skewed-edge2">
+               
+
+               </div>
+          </div>       
+-->
+      
+      
+      
+         
+ 
+      
+      
+      
+           <!-- Footer -->
+<!--
+           <footer class="footer mt-4 hidden-lg-up">
+               <div class="bg-colour container-fluid text-center">
+                <span class="text-muted h6">Proudly produced by Jhauk Music</span>
+                <br>
+                <span class="text-muted h6">© Jeremy Hajduk 2017</span>   
+            </div>
+          </footer>
+      
+-->
+            <!-- Footer -->
+           <footer class="footer footy mt-4 hidden-md-down">
+               <div class="bg-colour container-fluid text-center">
+                   <div class="row">
+                       
+                    
+                   
+                       <div class="col text-center pr-5">
+                            <span class="text-muted h6"> by Jhauk Music</span>
+                            <br>
+                            <span class="text-muted h6">© Jeremy Hajduk 2017</span>   
+                        </div>
+                       
+                        
+                       
+                  </div>   
+            </div>
+          </footer>
+      
+      
+      
+      
+      
+      
+      
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="../../js/scaleInfo.js"></script>
+    <script src="../../js/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>

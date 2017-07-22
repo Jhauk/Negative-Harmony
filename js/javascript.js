@@ -1,24 +1,11 @@
 var selectedScaleResult;
 
 
-// All of the Key Information
-
-//C major
-
-var cMajor = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C'];
-var cMajorTriads = ['Cmaj<br>C - E - G', 'Dmin<br>D - F - A', 'E - G - B', 'F - A - C', 'G - B - D', 'A - C - E', 'B - D - F', 'C - E - G'];
-var cMajorSevenths = [];
-var cMajorNinths = [];
-
-var cMajorNegative = ['G', 'F', 'Eb', 'D', 'C', 'Bb', 'Ab', 'G'];
-var cMajorNegativeTriads = ['Cmin<br>C - Eb - G', 'Bbmaj<br>Bb - D - F', 'Eb', 'D', 'C', 'Bb', 'Ab', 'G'];
-var cMajorNegativeSevenths = [];
-var cMajorNegativeNinths = [];
-
-
-
-//C# major
-
+//Scale page button flags
+var scaleFlag = "On";
+var chordFlag = "Off";
+var seventhsFlag = "Off";
+var ninthsFlag = "Off";
 
 //This powers the scale selector on the main page
 function loadScale() {
@@ -80,7 +67,13 @@ function loadScale() {
     }
     
     function getScaleUrl() {
-        scaleURL = ( "pages/" + selectedScaleResult + ".html" );
+        var pagesFolder = "";
+        if (majMin === "major") {
+            pagesFolder = "Major";
+        } else {
+            pagesFolder = "Minor";
+        }
+        scaleURL = ( "pages/" + pagesFolder + "/" + selectedScaleResult + ".html" );
     }
     
     
@@ -94,66 +87,128 @@ function loadScale() {
     window.location = scaleURL ;  
     
     return false;
-}
+};
 
 
 
-//This powers "Show Triads" button on the scale pages
-function dynamicTable( keyArray, negativeKeyArray ) {
-    
+//This powers "Scales" button on the scale pages
+function showScales( keyObject, negativeKeyObject ) {
+    var counter = 0;
     
     //Exits the function if it's already "active"   
-    if ( document.getElementById("original0").innerHTML === "Cmaj<br>C - E - G" ) {
+    if ( scaleFlag === "On" ) {
         return;
     }
+    
+    //Setting flags
+    scaleFlag = "On";
+    chordFlag = "Off";
+    seventhsFlag = "Off";
+    ninthsFlag = "Off";
+
+    $("td").fadeOut(1).innerHTML;
+
+    //Sets the Original Column
+    for (var scaleDegree in keyObject) {
+        document.getElementById("original" + counter).innerHTML = keyObject[scaleDegree];
+        counter += 1;
+
+    };
+    
+    var counter = 0
+
+    
+    //Sets the Negative Column
+    for (var scaleDegree in negativeKeyObject) {
+        document.getElementById("negative" + counter).innerHTML = negativeKeyObject[scaleDegree];
+        counter += 1;
+    };
+    
+    $("td").fadeIn().innerHTML;
+};   
+
+
+
+//This powers "Chords" button on the scale pages
+function showChords( originalTriads, negativeTriads) {  
+    var counter = 0;
+    
+
+    //Exits the function if it's already "active"   
+    if ( chordFlag === "On" ) {
+        return;
+    }
+    
+    //Setting flags
+    scaleFlag = "Off";
+    chordFlag = "On";
+    seventhsFlag = "Off";
+    ninthsFlag = "Off";
     
     $("td").fadeOut(1).innerHTML;
     
     //Fills in the original column
-    for ( var i = 0; i < keyArray.length; i += 1) {
-        document.getElementById("original" + i).innerHTML = keyArray[i];
-    }
+    for (var scaleDegree in originalTriads) {
+        document.getElementById("original" + counter).innerHTML = "<b>" + originalTriads[scaleDegree][0] + "</b><hr class='tableHr'>" + originalTriads[scaleDegree][1];
+        counter += 1;
+        console.log(counter);
+    };    
     
-    //Fills in the negative column
-    for ( var i = 0; i < negativeKeyArray.length; i += 1) {
-            document.getElementById("negative" + i).innerHTML = negativeKeyArray[i];
-        }
+    var counter = 0;
+    
+    //Fills in the original column
+    for (var scaleDegree in negativeTriads) {
+        document.getElementById("negative" + counter).innerHTML = "<b>" + negativeTriads[scaleDegree][0] + "</b><hr class='tableHr'>" + negativeTriads[scaleDegree][1];
+        counter += 1;
+        console.log(counter);
+    };    
     
     $("td").fadeIn().innerHTML;
-    }
-
-    
+};
 
 
-//This powers "Show Scales" button on the scale pages
-function refreshTable( keyArray, negativeKeyArray ) {
-    
+
+//This powers "Sevenths" button on the scale pages
+function showSevenths( orignalSevenths, negativeSevenths ) {  
+    var counter = 0;
     
     //Exits the function if it's already "active"   
-    if ( document.getElementById("original0").innerHTML === "C" ) {
+    if ( seventhsFlag === "On" ) {
         return;
     }
     
-    $("td").fadeOut(1).innerHTML;
-
-    //Resets Original column
-    for ( var i = 0; i < keyArray.length; i += 1) {
-       
-        document.getElementById("original" + i).innerHTML = keyArray[i];
-        
-
-    }
+    //Setting flags
+    scaleFlag = "Off";
+    chordFlag = "Off";
+    seventhsFlag = "On";
+    ninthsFlag = "Off";
     
-    //Resets Negative column
-    for ( var i = 0; i < negativeKeyArray.length; i += 1) {   
-        document.getElementById("negative" + i).innerHTML = negativeKeyArray[i];
-    }
+    $("td").fadeOut(1).innerHTML;
+    
+    //Fills in the original column
+    for (var scaleDegree in orignalSevenths) {
+        document.getElementById("original" + counter).innerHTML = "<b>" + orignalSevenths[scaleDegree][0] + "</b><hr class='tableHr'>" + orignalSevenths[scaleDegree][1];
+        counter += 1;
+        console.log(counter);
+    };    
+    
+    var counter = 0;
+    
+    //Fills in the original column
+    for (var scaleDegree in negativeSevenths) {
+        document.getElementById("negative" + counter).innerHTML = "<b>" + negativeSevenths[scaleDegree][0] + "</b><hr class='tableHr'>" + negativeSevenths[scaleDegree][1];
+        counter += 1;
+        console.log(counter);
+    };    
     
     $("td").fadeIn().innerHTML;
-}   
-
+}; 
 
     
+
+
+
+
 
     
 
